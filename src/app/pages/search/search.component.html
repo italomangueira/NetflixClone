@@ -1,0 +1,30 @@
+<div class="contain mt-5 p-5">
+    <form class="" [formGroup]="searchForm" (ngSubmit)="submitForm()">
+        <div class="inputs">
+            <div class="mb-3">
+                <input type="text" class="input" formControlName="movieName" placeholder="Search Movie ...">
+            </div>
+
+            <div class="">
+                <button class="button">Search</button>
+            </div>
+        </div>
+    </form>
+    <div class="row mt-3">
+        <div class="glass col-lg-3 mt-3" *ngFor="let s of searchResult">
+            <div class="row ">
+                <div class="col-lg-3 mt-2 mb-2">
+                    <img 
+                        src="https://image.tmdb.org/t/p/original/{{ s.poster_path || s.backdrop_path }}"
+                        class="rowimg"
+                        [routerLink]="['/movie',s.id]">
+                </div>
+                <div class="font col-lg-9 mt-2 mb-2">
+                    <h4 [routerLink]="['/movie',s.id]">{{s.original_title || s.name}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

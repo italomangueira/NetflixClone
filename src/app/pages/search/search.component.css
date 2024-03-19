@@ -1,0 +1,88 @@
+img {
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  font-size: 15px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #fff;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+  background: rgba(255, 255, 255, .05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding-bottom: 10px;
+  }
+}
+
+
+
+
+.font {
+  font-size: 10px;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+button {
+  --hover-shadows: 5px 5px 10px #121212,
+                    -5px -5px 10px rgb(164, 35, 35);
+  --accent:rgb(164, 35, 35);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: rgb(164, 35, 35);
+  color: white;
+  padding: 0.5em 1em;
+  transition: box-shadow ease-in-out 0.3s,
+              background-color ease-in-out 0.1s,
+              letter-spacing ease-in-out 0.1s,
+              transform ease-in-out 0.1s;
+  
+ }
+ 
+ button:hover {
+  box-shadow: var(--hover-shadows);
+ }
+ 
+ button:active {
+  box-shadow: var(--hover-shadows),
+               var(--accent) 0px 0px 10px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+ }
+ 
+
+.glass{
+  background: rgba(255, 255, 255, .05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-right: solid 1px;
+  border-left: solid 1px;
+}
+
+.rowimg:hover{
+  transform: scale(1.08);
+  cursor: pointer;
+  
+}
